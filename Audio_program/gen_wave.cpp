@@ -293,8 +293,8 @@ void al_buf_init_z_v(unsigned int & bufferid, double distance,
 //найти смещение в градусах
 double degree(double x, double z)
 {
-	double tn = std::tan(z / x);
-	return 90 - std::atan(tn);
+	double tn = z / x;
+	return 90 - (std::atan(tn)*180/3.14);
 }
 
 //Создать буфер на основе расстояния до объекта, его кооринаты X и его скорости
