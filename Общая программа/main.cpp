@@ -47,7 +47,7 @@ int main()
 		auto csz = Center_and_Size(frame, minR, maxR, minG, maxG, minB, maxB, 200, (frame.cols + frame.rows) / 2.0, 11.0);
 		alSource3f(sourceid, AL_POSITION, csz[0] / 100, csz[2] / 100, csz[1] / 100);
 		Sleep(50);
-		if ((double(clock() - start) / CLOCKS_PER_SEC) > (t - 0.5))
+		if ((double(clock() - start) / CLOCKS_PER_SEC) > (t - 0.1))
 			break;
 	}
 	return 0;
