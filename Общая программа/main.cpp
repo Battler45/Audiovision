@@ -9,7 +9,7 @@ using namespace std;
   
 int main()
 {
-	
+	See();
 	ALCdevice* device;
 	ALCcontext* context;
 	al_init(device, context);
@@ -37,7 +37,7 @@ int main()
 	alSourcePlay(sourceid);
 
 	// получаем информацию о видео-файле
-	cv::VideoCapture capture(filename);
+	cv::VideoCapture capture(-1);
 	double fps = capture.get(CV_CAP_PROP_FPS);
 
 
